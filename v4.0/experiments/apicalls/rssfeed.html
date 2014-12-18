@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>RSS Feeds</title>
+    <link rel="stylesheet" type="text/css" href="../asp/css/asp.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+</head>
+
+<body>
+
+    <div class="main container">
+        <!-- I use div tags to create a table like structure. You can consider this as 1 row and 2 coloums structure -->
+        <div class="exp-row">
+            <!-- This div tag represents the first coloumn -->
+            <div class="exp-col-1">
+                <h2>Purpose</h2>
+                <p>
+                    The purpose of this experiment is to call the New York times RSS Feed using the Google Feed API
+                </p>
+
+                <hr />
+                <div class="exp-main">
+                    <h2>Experiment</h2>
+                    <div class="exp-content">
+                        <p>
+                            The Experiment calls the New york times api to retrieve the rss feeds. This experiment is used to understand how
+                            to generate rss using the Google Feed API. These feeds can be generated in a very time as google 
+                            allows developeres to use the automated code to generate feeds.
+                        </p>
+                        <p>
+                            We have used javascript completely to generate dynamic elements of the feeds. We display the url feeds
+                            by calling the feed method of the google jsapi. This automatically fetches the data and we dynamically generate
+                            the elements as a href. I have also provided feed limit as well which helps to work with less data
+                            and avoid congestion in the traffic.
+                        </p>
+                    </div>
+                    <br />
+                    <h1>RSS Feeds Demonstration</h1>
+                    <div id="feed"></div>
+
+                    <script type="text/javascript">
+      
+                    </script>
+                </div>
+                <hr />
+
+
+                <div class="exp-source">
+                    <h2>Source</h2>
+                    <p>
+                        <ul>
+                            <li><a href="../../fileview/Default.aspx?~/experiments/apicalls/rssfeed.html">Source Code</a></li>
+                        </ul>
+                    </p>
+                    <hr />
+                </div>
+
+                <div class="exp-reference">
+                    <h2>References</h2>
+                    <p>
+                        <ul>
+                            <li><a href="https://developers.google.com/feed/v1/reference?csw=1">Google Feed API</a></li>
+                        </ul>
+                    </p>
+                </div>
+
+            </div><!-- exp-col-1 -->
+        </div><!-- row -->
+    </div><!-- main container -->
+
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("feeds", "1")
+    </script>
+    <script src="js/rssfeed.js"></script>
+</body>
+</html>

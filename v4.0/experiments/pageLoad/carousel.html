@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../CSS3experiments/css/jquery.css" />
+    <link rel="stylesheet" type="text/css" href="../../javascript/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/carousel.css" />
+    <title>CSS3 Experiment</title>
+
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="main container">
+        <!-- I use div tags to create a table like structure. You can consider this as 1 row and 2 coloums structure -->
+        <div class="exp-row">
+            <!-- This div tag represents the first coloumn -->
+            <div class="exp-col-1">
+                <h2>Purpose</h2>
+                <p>
+                    The purpose of this experiment is to use jquery to generate a carousel slider for images that
+                    keeps changing after a specified time.
+                </p>
+
+                <hr />
+                <div class="exp-main">
+                    <h2>Experiment</h2>
+                    <p>
+                        Watch the carousel changing the image. Initially I have added four images . One can do as many as he wants.
+                        One can achieve this by creating a list tag of images and then using jquery animate to slide images
+                        after a fixed interval.
+                    </p>
+                    <div id="outer-carousel">
+                        <div id="inner-carousel">
+                            <ul>
+                                <li><img src="../../images/image_city1.jpg" /></li>
+                                <li><img src="../../images/image_city2.jpg" /></li>
+                                <li><img src="../../images/image_city3.jpg" /></li>
+                                <li><img src="../../images/image_city4.jpg" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+
+
+                <div class="exp-source">
+                    <h2>Source</h2>
+                    <p>
+                        <ul>
+                            <li><a href="../../fileview/Default.aspx?~/experiments/pageLoad/carousel.html">Source Code</a></li>
+                            <li><a href="../../fileview/Default.aspx?~/experiments/pageLoad/css/carousel.css">CSS</a></li>
+                            <li><a href="../../fileview/Default.aspx?~/experiments/pageLoad/js/carousel.js">JS</a></li>
+                        </ul>
+                    </p>
+                    <hr />
+                </div>
+
+                <div class="exp-reference">
+                    <h2>References</h2>
+                    <p>
+                        <ul>
+                            <li><a href="http://sorgalla.com/jcarousel/">Basic Carousel</a></li>
+                        </ul>
+                    </p>
+                </div>
+
+            </div><!-- exp-col-1 -->
+        </div><!-- row -->
+    </div><!-- main container -->
+    <script src="../../javascript/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="../../javascript/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="js/carousel.js" type="text/javascript"></script>
+</body>
+</html>

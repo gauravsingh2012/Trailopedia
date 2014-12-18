@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/jquery.css" />
+    <link rel="stylesheet" type="text/css" href="../../javascript/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/common.css" />
+    <title>CSS3 Experiment</title>
+</head>
+<body>
+    <!-- main container -->
+    <div class="main container">
+        <!-- I use div tags to create a table like structure. You can consider this as 1 row and 2 coloums structure -->
+        <div class="exp-row">
+            <!-- This div tag represents the first coloumn -->
+            <div class="exp-col-1">
+                <h2>Purpose</h2>
+                <p>
+                    The purpose of this experiment is to use jquery to generate dynamic content on the website
+                </p>
+
+                <hr />
+                <div class="exp-main">
+                    <h2>Experiment</h2>
+                    <div class="exp-content">
+                        <p>
+                            Click on the two buttons to see how two divs get dynamically get generated.
+                        </p>
+                        <p>
+                            How we achieve this is by using jquery and creating two new div blocks and finally appending them
+                            to a section where we want the blocks to be displayed.
+                        </p>
+                    </div>
+                    <br />
+                    <div id="exp-append-section">
+                        <a class="exp-shape" id="exp-square-btn">Click me to generate a Square</a>
+                        <a class="exp-shape" id="exp-circle-btn">Click me to generate a Circle</a>
+                    </div>
+                </div>
+                <hr />
+
+
+                <div class="exp-source">
+                    <h2>Source</h2>
+                    <p>
+                        <ul>
+                            <li><a href="../../fileview/Default.aspx?~/experiments/CSS3experiments/dynamiccontent.html">Source Code</a></li>
+                            <li><a href="../../fileview/Default.aspx?~/experiments/CSS3experiments/css/jquery.css">CSS</a></li>
+                            <li><a href="../../fileview/Default.aspx?~/experiments/CSS3experiments/js/dynamiccontent.js">JS</a></li>
+                        </ul>
+                    </p>
+                    <hr />
+                </div>
+
+                <div class="exp-reference">
+                    <h2>References</h2>
+                    <p>
+                        <ul>
+                            <li><a href="http://jqueryui.com/sortable/">jQuery UI</a></li>
+                        </ul>
+                    </p>
+                </div>
+
+            </div><!-- exp-col-1 -->
+        </div><!-- row -->
+    </div><!-- main container -->
+    <script src="../../javascript/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="../../javascript/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js" type="text/javascript"></script>
+    <script src="js/dynamiccontent.js"></script>
+
+</body>
+</html>

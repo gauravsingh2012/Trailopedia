@@ -1,0 +1,51 @@
+﻿.map-block {
+    box-shadow: 0 0 10px;
+    border-width: 2px;
+    height: 450px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+body {
+    background-color: #e8e8e8;
+}
+
+h1 {
+    margin-top: 7%;
+    color: #888;
+}
+
+@media ( max-width : 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: white;
+    }
+
+    h1 {
+        margin-top: 15%;
+    }
+}
+
+@media ( max-width :500px) {
+    h1 {
+        margin-top: 25%;
+    }
+}
+
+@media (min-width:768px) and (max-width: 992px) {
+    h1 {
+        margin-top: 25%;
+    }
+}
+
+.navbar-fixed-top {
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}

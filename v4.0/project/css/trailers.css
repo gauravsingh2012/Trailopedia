@@ -1,0 +1,49 @@
+﻿.vid:first-child {
+    display: none !important;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+iframe {
+    width: 100%;
+}
+
+.title-container {
+    margin-top: 4%;
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: white;
+    }
+
+    .title-container {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 405px) {
+
+    .title-container {
+        margin-top: 15%;
+    }
+}
+
+.navbar-fixed-top {
+    background-color: #428bca;
+    border-color: #428bca;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.poster {
+    height: 315px;
+}

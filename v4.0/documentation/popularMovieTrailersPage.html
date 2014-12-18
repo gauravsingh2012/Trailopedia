@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../experiments/CSS3experiments/css/jquery.css" />
+    <link rel="stylesheet" type="text/css" href="../javascript/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Popular Movie Trailers</title>
+</head>
+<body>
+    <!-- main container -->
+    <div class="main container">
+        <!-- I use div tags to create a table like structure. You can consider this as 1 row and 2 coloums structure -->
+        <div class="exp-row">
+            <!-- This div tag represents the first coloumn -->
+            <div class="exp-col-1">
+                <div class="exp-main">
+                    <h2>Popular Movie Trailers Page</h2>
+                    <div class="exp-content">
+                        <p>
+                            The page displays all the popular movie Trailers which are about to release. The movie db api url
+                            to obtain the result set is https://api.themoviedb.org/3/movie/popular?api_key=052ca14131fc2be845560a604c66ffd5.
+                            The result set is parsed and one div block is cloned with respect to the number of elements in the response from
+                            the api.
+                        </p>
+
+                        <br />
+
+                        <img src="../images/popularMovies.png" width="600" height="400" />
+
+                        <p>
+                            Note that in the above screen shot I have Get Details and Watch All Trailers Button as well. The Get Details
+                            brings details about the movie and watch all trailers button allows access to all trailers for the movie.I have also
+                            provided pagination at the end of each page to parse all other json pages response by providing a page parameter
+                            in the API. Also Observe that the page is responsive.
+                        </p>
+
+                    </div>
+                </div><!-- exp-col-1 -->
+            </div><!-- row -->
+        </div><!-- exp-row -->
+    </div><!-- main container -->
+</body>
+</html>

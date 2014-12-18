@@ -1,0 +1,48 @@
+﻿.templates{
+    display : none;
+}
+
+.next-line{
+    clear:both;
+}
+
+.exp-main{
+    width: 100%; display: table; float: left; padding-bottom: 10px;
+}
+
+.exp-content{
+    width: 100%; margin-left: 0px;
+}
+
+.search-div{
+    display:block;
+}
+
+.search-text{
+    float:left;display:table;
+}
+
+.exp-content-image{
+    width: 25%; margin-right: 0px; height: 200px; float: left;
+}
+
+.exp-content-write {
+    width: 90%; margin-left: 0px;
+}
+
+.movie-container{
+    display:none;
+}
+
+.movie-display {
+    display: table;
+}
+
+.movie-poster{
+    height:100px;float:left;
+}
+
+.movie-title {
+    float:left;clear:right;
+}
+

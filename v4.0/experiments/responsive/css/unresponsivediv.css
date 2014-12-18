@@ -1,0 +1,19 @@
+﻿.exp-purpose {
+    width: 1350px;
+}
+
+.exp-content {
+    width: 100%;
+}
+
+.exp-wrapper {
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+body {
+    background: #e9e9e9 url('../../../images/texture_grain_200x200_v2.png');
+}

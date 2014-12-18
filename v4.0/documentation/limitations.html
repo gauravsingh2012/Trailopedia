@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../experiments/CSS3experiments/css/jquery.css" />
+    <link rel="stylesheet" type="text/css" href="../javascript/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <title>Limitations and Bugs</title>
+</head>
+<body>
+    <!-- main container -->
+    <div class="main container">
+        <!-- I use div tags to create a table like structure. You can consider this as 1 row and 2 coloums structure -->
+        <div class="exp-row">
+            <!-- This div tag represents the first coloumn -->
+            <div class="exp-col-1">
+                <div class="exp-main">
+                    <h2>Limitations and Bugs</h2>
+                    <div class="exp-content">
+                        <p>
+                            There are of course a few bugs in my project. Everyone has them. Unfortunately I do not have a fix for
+                            them. The API takes about a second or two to load my videos on the page. Although it is fine for someone
+                            with a high speed internet but could be a problem for someone with low speed internets.
+                        </p>
+
+                        <br />
+
+                        <p>
+                            There is one weird anamoly in my page that when I click the back button from details page or trailers page
+                            back to the any video page, I see elements there but not in the correct order. I don't Why that happens. I have
+                            spent hours on debugging it but still havn't found a solution for this.
+                        </p>
+
+                        <br />
+
+                        <p>
+                            Obviously since I use API calls, I cannot have complete information. It would depend on the API's database whether
+                            they have that information. So it is possible that some popular might end with no results but I have handled
+                            cases for that to let the end user aware that it could not find the particular movie or TV show for you.
+                        </p>
+
+                        <br />
+
+                        <p>
+                            One Other Limitation that I have is that my search Theatre feature is a workaround. I enter the address of the
+                            movie theatre and then display the location on the map. The original feature was to call fandango api and get
+                            details of theatres using zip code parameter. But Since my developer key remains inactive, I decided to scrape this
+                            feature from the project.
+                        </p>
+                        <p>
+                            <h3>
+                                References For Images:
+                            </h3>
+                        </p>
+                        <p>
+                            My Poster_default.gif image is from the Rotten Tomatoes Website. I use this image for displying images for movie
+                            posters that do not exist.
+                        </p>
+                    </div>
+                </div><!-- exp-col-1 -->
+            </div><!-- row -->
+        </div><!-- exp-row -->
+    </div><!-- main container -->
+</body>
+</html>

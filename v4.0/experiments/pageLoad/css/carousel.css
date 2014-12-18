@@ -1,0 +1,34 @@
+﻿
+#outer-carousel {
+    margin: 0px 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 22px #808080;
+    width: 600px;
+    height: 400px;
+}
+
+#inner-carousel {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+}
+
+    #inner-carousel ul {
+        list-style: none;
+        width: 2400px;
+        height: 400px;
+        padding: 0px 0px 0px 0px;
+    }
+
+        #inner-carousel ul li {
+            float: left;
+            width: 600px;
+            height: 400px;
+        }
+
+            #inner-carousel ul li img {
+                width: 600px;
+                height: 400px;
+            }
