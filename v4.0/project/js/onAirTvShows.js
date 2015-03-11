@@ -30,24 +30,27 @@ function fetchData(id, movieName) {
         dataType: "jsonp",
         jsonpCallback: 'myRoviTrailerCallBack' + id,
         success: function (dataTrailers) {
-            var container = $(".container");
-            var row = $(".row");
-            var movieTrailerContainer = $(".movie-trailer-container:first")
-            var id = dataTrailers.id;
-            var trailerClone = movieTrailerContainer.clone();
-            // URL is appended with a key of the video so as to display the trailer in the iFrame
-            var youtubeURL = "https://www.youtube.com/embed/" + dataTrailers.results[0].key;
-            console.log(youtubeURL);
+			if (dataTrailers.results.length !== 0){
 
-            trailerClone.attr("id", id);
-            trailerClone.find(".thumbnail .iFrameYouTube").attr("src", youtubeURL);
-            trailerClone.find(".hidden-id-label").text(id);
-            trailerClone.find(".thumbnail .caption h3").html(movieName);
-            fetchCast(id, trailerClone);
-            row.append(trailerClone);
+				var container = $(".container");
+				var row = $(".row");
+				var movieTrailerContainer = $(".movie-trailer-container:first")
+				var id = dataTrailers.id;
+				var trailerClone = movieTrailerContainer.clone();
+				// URL is appended with a key of the video so as to display the trailer in the iFrame
+				var youtubeURL = "https://www.youtube.com/embed/" + dataTrailers.results[0].key;
+				console.log(youtubeURL);
+
+				trailerClone.attr("id", id);
+				trailerClone.find(".thumbnail .iFrameYouTube").attr("src", youtubeURL);
+				trailerClone.find(".hidden-id-label").text(id);
+				trailerClone.find(".thumbnail .caption h3").html(movieName);
+				fetchCast(id, trailerClone);
+				row.append(trailerClone);
 
 
-            console.log(dataTrailers);
+				console.log(dataTrailers);
+			}
         }
     });
 
@@ -63,13 +66,18 @@ function fetchCast(id, trailerClone) {
         dataType: "jsonp",
         jsonpCallback: 'myRoviMovieCastCallBack' + id,
         success: function (dataCast) {
-            console.log(dataCast);
-            for (i = 0; i < 5; i++) {
-                castString = castString + dataCast.cast[i].name;
-                if (i != 4) {
-                    castString = castString + ","
-                }
-            }
+			if (dataCast.cast.length !== 0){
+
+				console.log(dataCast);
+				for (i = 0; i < 5; i++) {
+					if (typeof(dataCast.cast[i]) !== 'undefined'){
+						castString = castString + dataCast.cast[i].name;
+						if (i != 4) {
+							castString = castString + ","
+						}
+					}
+				}
+			}
 
             trailerClone.find(".thumbnail .caption p:first").html(castString);
         }
@@ -133,7 +141,9 @@ function getNextPage() {
             movieTrailerContainerAll.remove();
             row.append(trailerClone);
             for (i = 0; i < data.results.length; i++) {
-                fetchData(data.results[i].id, data.results[i].name);
+				if (data.results[i].length !== 0){
+					fetchData(data.results[i].id, data.results[i].name);
+				}
             }
 
         }
@@ -164,7 +174,9 @@ function getPreviousPage() {
             movieTrailerContainerAll.remove();
             row.append(trailerClone);
             for (i = 0; i < data.results.length; i++) {
-                fetchData(data.results[i].id, data.results[i].name);
+				if (data.results[i].length !== 0){
+					fetchData(data.results[i].id, data.results[i].name);
+				}
             }
 
         }
@@ -184,7 +196,9 @@ $(document).ready(function () {
             nextPageNumber = data.page + 1;
             previousPageNumber = data.page - 1;
             for (i = 0; i < data.results.length; i++) {
-                fetchData(data.results[i].id, data.results[i].name);
+				if (data.results[i].length !== 0){
+					fetchData(data.results[i].id, data.results[i].name);
+				}
             }
 
         }

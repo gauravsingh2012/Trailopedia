@@ -8,23 +8,24 @@ function fetchData(id) {
         dataType: "jsonp",
         jsonpCallback: 'myRoviTrailerCallBack' + id,
         success: function (dataTrailers) {
-
-            for (i = 0; i < dataTrailers.results.length; i++) {
-                var id = dataTrailers.id;
-                var container = $(".col-md-8");
-                var videoContainer = $(".vid:first");
-                var trailerClone = videoContainer.clone();
-                console.log(trailerClone);
-                var youtubeURL = "https://www.youtube.com/embed/" + dataTrailers.results[i].key;
-                trailerClone.attr("id", id);
-                trailerClone.find(".youtube-player").attr("src", youtubeURL);
-                container.append(trailerClone);
-                container.append("<br />");
-                console.log(youtubeURL);
-
-            }
-
-
+			if (dataTrailers.results.length !== 0){
+			
+				for (i = 0; i < dataTrailers.results.length; i++) {
+					if (dataTrailers.results[i].length !== 0){
+						var id = dataTrailers.id;
+						var container = $(".col-md-8");
+						var videoContainer = $(".vid:first");
+						var trailerClone = videoContainer.clone();
+						console.log(trailerClone);
+						var youtubeURL = "https://www.youtube.com/embed/" + dataTrailers.results[i].key;
+						trailerClone.attr("id", id);
+						trailerClone.find(".youtube-player").attr("src", youtubeURL);
+						container.append(trailerClone);
+						container.append("<br />");
+						console.log(youtubeURL);
+					}
+				}
+			}
             console.log(dataTrailers);
         }
     });
